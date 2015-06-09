@@ -4,6 +4,7 @@
     <file url="file://$PROJECT_DIR$/app/scripts/app.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/scripts/controllers/accountCreation.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/scripts/controllers/addMovie.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/scripts/controllers/loggedCriticisms.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/scripts/controllers/login.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/scripts/controllers/main.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/scripts/controllers/menu.js" charset="UTF-8" />
@@ -20,6 +21,7 @@
     <file url="file://$PROJECT_DIR$/app/scripts/services/external/movieInfoService.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/scripts/services/internal/accountCreationService.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/scripts/services/internal/accountFetchService.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/scripts/services/internal/criticismCreationService.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/scripts/services/internal/movieCreationService.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/scripts/services/internal/movieFetchService.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/scripts/services/internal/pickingCreationService.js" charset="UTF-8" />
@@ -33,6 +35,7 @@
     <file url="file://$PROJECT_DIR$/app/views/createSelection.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/views/directives/movieWithDetails.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/views/directives/votingAndResults.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/views/loggedCriticisms.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/views/login.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/views/main.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/views/results.html" charset="UTF-8" />
