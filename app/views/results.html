@@ -1,0 +1,20 @@
+<voting-and-results-menu></voting-and-results-menu>
+
+<h2>{{selection.name}} @ {{selection.location}}</h2>
+
+<h2>Voting results</h2>
+
+<div ng-repeat="result in moviesAndVotes.movieAndVotes | orderBy:'-amountOfVotes'">
+
+  <div class="row">
+    <div class="col-md-5">
+      <div ng-class='{"most-votes":hasMostVotes(result), "movie-votes":!hasMostVotes(result)}'>
+        <h3>{{result.movie.title}}</h3>
+      </div>
+    </div>
+    <div class="col-md-5" ng-show="hasMostVotes(result)">
+        <h2><b>Highest number of votes!</b></h2>
+    </div>
+  </div>
+</div>
+

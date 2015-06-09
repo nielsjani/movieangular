@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false">
+    <file url="file://$PROJECT_DIR$/app/scripts/app.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/scripts/controllers/accountCreation.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/scripts/controllers/addMovie.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/scripts/controllers/login.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/scripts/controllers/main.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/scripts/controllers/menu.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/scripts/controllers/movieDetails.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/scripts/controllers/publicMoviePoll.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/scripts/controllers/results.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/scripts/controllers/selectionComposer.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/scripts/controllers/selectionConfirmation.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/scripts/controllers/yoursitesucks.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/scripts/directives/addExternalMovie.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/scripts/directives/checkUser.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/scripts/directives/movieWithDetails.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/scripts/directives/votingAndResultsMenu.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/scripts/services/external/movieInfoService.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/scripts/services/internal/accountCreationService.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/scripts/services/internal/accountFetchService.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/scripts/services/internal/movieCreationService.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/scripts/services/internal/movieFetchService.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/scripts/services/internal/pickingCreationService.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/scripts/services/internal/pickingFetchService.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/scripts/services/internal/selectionCreationService.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/scripts/services/internal/selectionFetchService.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/scripts/services/internal/userFactory.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/styles/custom.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/views/addMovie.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/views/createAccount.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/views/createSelection.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/views/directives/movieWithDetails.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/views/directives/votingAndResults.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/views/login.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/views/main.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/views/results.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/views/selectionConfirmation.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/views/yoursitesucks.html" charset="UTF-8" />
+  </component>
+</project>

@@ -1,0 +1,26 @@
+<div class="alert alert-success" ng-show="movieAdded">
+  Your movie has been added to the database
+</div>
+
+<form class="form-inline">
+  <div class="form-group">
+    <label for="inputMovieTitle" class="sr-only">Movie title</label>
+    <input type="input" class="form-control" id="inputMovieTitle2" placeholder="Movie Title" ng-model="movieTitleInput">
+  </div>
+  <button type="submit" ng-click="findMovie()" class="btn btn-default">Try to find movie</button>
+</form>
+
+<div ng-show="testRunSuccess">
+
+  <div ng-hide="loaded">
+    <h2>Loading movie data. Please be patient.</h2>
+  </div>
+  <div ng-show="loaded">
+
+    <movie-with-details movie-info=movieInfo></movie-with-details>
+
+    <div ng-show="showAddButton">
+      <button type="submit" ng-click="addMovieToInternalDB()" class="btn btn-default">Save movie to database</button>
+    </div>
+  </div>
+</div>

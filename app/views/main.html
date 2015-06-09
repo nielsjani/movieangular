@@ -1,0 +1,36 @@
+<voting-and-results-menu></voting-and-results-menu>
+
+<div class="alert alert-success" ng-show="showPickingsSubmitted">
+  Your pickings for the next trip have been submitted
+</div>
+
+<h2>{{selection.name}} on {{dateString}} @ {{selection.location}}</h2>
+
+  <h3>Movies</h3>
+
+  <div class="fixed">
+    <div ng-show="loggedIn()">
+      <h4>Remaining picks: <br/> {{remainingChoices}}</h4>
+      <button type="submit" ng-hide="!showSubmitButton()" ng-click="submitPicks()" class="btn btn-default">Submit your picks</button>
+    </div>
+    <div ng-hide="loggedIn()">
+      <h4>Log in to cast your votes</h4>
+    </div>
+  </div>
+
+  <div ng-repeat="movieInfo in movies" >
+
+    <div ng-class='{"movie-hover":hoveredId==movieInfo.id, "movie-selected":isSelected(movieInfo.id)}'
+         ng-mouseover="mouseOver(movieInfo.id)"
+         ng-mouseleave="mouseLeave()"
+         ng-click="selectMovie(movieInfo.id)">
+      <movie-with-details movie-info='movieInfo'></movie-with-details>
+    </div>
+  </div>
+
+
+
+
+
+
+

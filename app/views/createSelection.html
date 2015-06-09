@@ -1,0 +1,70 @@
+<div ng-controller="SelectionComposerCtrl">
+
+<h2>The Selection</h2>
+
+  <!--<p>{{movieToSave}}</p>-->
+
+  <p>Looking for a particular movie? Insert (part) of its title in the box below to check whether we have the movie in our database.</p>
+  <div class="row">
+    <div class=col-md-5>
+      <input class=form-control placeholder="Title" ng-model="movieFilter.title">
+    </div>
+  </div>
+
+  <br />
+
+  <div class="fixed col-xs-11">
+    <h3>Current selection:</h3>
+    <div ng-repeat="selectionItem in selection">
+          <label>{{selectionItem.title}}</label>
+    </div>
+
+    <button type="submit" ng-click="goToConfirmationScreen()" class="btn btn-default">Submit selection</button>
+
+
+  </div>
+
+  <div ng-repeat="movie in filteredMovies =( movies | filter:movieFilter)">
+    <div class="row">
+      <div class="col-md-1">
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" ng-change="selectMovie(movie)" ng-model="selectedMovie" ng-checked="isSelected(movie)">
+          </label>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <a href={{getPosterUrl(movie)}} data-lightbox={{getPosterUrl(movie)}} data-title="{{movie.title}}">
+          <img ng-src={{getPosterUrl(movie)}} alt="{{movie.title}} poster" style="zoom: 0.2" >
+        </a>
+      </div>
+        <h2 class="col-md-1">{{movie.title}}</h2>
+    </div>
+    <br />
+  </div>
+
+
+
+
+  <div ng-show="filteredMovies.length === 0">
+    <div class="row">
+      <div class="col-md-5">
+        <p>We could not find your requested movie in our database.
+          Since we are sure you are incapable of making typos, you can try to look up the movie you seek using an external source.
+          If the movie presented to you is the one you are looking for, please click the "Add" button to add it to our internal
+          database. It will also be automatically added to your selection for the cinetrip you are currently planning.
+        </p>
+      </div>
+    </div>
+
+    <add-external-movie show-add-button=showOriginalAddImplementation movie-info=movieToSave></add-external-movie>
+    <!--TODO: add button to add to db and set input field to title of added movie-->
+  <div ng-show="showAddButton">
+    <br />
+    <button type="submit" ng-click="addMovieToInternalDBAndSetSelectionText()" class="btn btn-default">Save movie to database</button>
+  </div>
+
+  </div>
+
+
+</div>

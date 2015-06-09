@@ -1,0 +1,38 @@
+<div ng-controller="SelectionConfirmationCtrl">
+
+  <h3>Confirm your selection and set additional data</h3>
+
+  <form class="form-inline">
+
+    <div class="form-group">
+
+
+    <h4>The selection</h4>
+
+    <div ng-repeat="movie in selection.movies">
+
+      <p>{{movie.title}}</p>
+
+    </div>
+
+    <h4>The date</h4>
+
+    <input type="date" name="selectiondate" ng-model="date ">
+
+    <h4>The title</h4>
+
+    <input type="input" class="form-control" id="inputSelectionTitle" placeholder="Selection Title" ng-model="selectionTitle" />
+
+      <h4>The location</h4>
+
+    <select ng-model="location" ng-options="cinema for cinema in cinemas"/>
+
+      <br/><br/>
+
+      <button type="submit" class="btn btn-default" ng-click="postFullSelection()">Save selection</button>
+
+    </div>
+
+  </form>
+
+</div>

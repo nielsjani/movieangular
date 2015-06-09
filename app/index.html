@@ -1,0 +1,124 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="lightbox/css/lightbox.css"/>
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/custom.css">
+
+    <!-- endbuild -->
+  </head>
+  <body ng-app="movieAngularApp">
+    <check-user></check-user>
+
+  <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+
+
+  <div class="container-fluid">
+    <div class="header" ng-controller="MenuCtrl">
+      <!-- Fixed navbar -->
+      <nav class="navbar navbar-default navbar-static-top" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <a class="navbar-brand" ng-href="#/">MovieAngular</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <div ng-show="isAdmin()">
+              <ul class="nav navbar-nav">
+                <li><a ng-href="#/addMovie">Add movie</a></li>
+              </ul>
+              <ul class="nav navbar-nav">
+                <li><a ng-href="#/createSelection">Create Selection</a></li>
+              </ul>
+            </div>
+            <div ng-show="isLoggedIn()">
+              <ul class="nav navbar-nav">
+                <li><a ng-href="{{getCritisismTab().url}}">{{getCritisismTab().text}}</a></li>
+              </ul>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="{{getLoginTab().url}}">{{getLoginTab().text}}</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+
+    <div class="container-fluid">
+      <div ng-view=""></div>
+    </div>
+
+    <div class="footer">
+      <div class="container">
+        <p><span class="glyphicon glyphicon-heart"></span> to the creator(s) of <a href="http://www.omdbapi.com/"> OMDb API</a></p>
+      </div>
+    </div>
+
+    <script src="lightbox/js/jquery-1.11.0.min.js"></script>
+    <script src="lightbox/js/lightbox.min.js"></script>
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-messages/angular-messages.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="scripts/app.js"></script>
+        <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/addMovie.js"></script>
+        <script src="scripts/controllers/publicMoviePoll.js"></script>
+        <script src="scripts/controllers/selectionComposer.js"></script>
+        <script src="scripts/controllers/results.js"></script>
+        <script src="scripts/controllers/movieDetails.js"></script>
+        <script src="scripts/controllers/selectionConfirmation.js"></script>
+        <script src="scripts/controllers/login.js"></script>
+        <script src="scripts/controllers/accountCreation.js"></script>
+        <script src="scripts/controllers/menu.js"></script>
+        <script src="scripts/controllers/yoursitesucks.js"></script>
+
+        <script src="scripts/services/external/movieInfoService.js"></script>
+        <script src="scripts/services/internal/movieFetchService.js"></script>
+        <script src="scripts/services/internal/movieCreationService.js"></script>
+        <script src="scripts/services/internal/accountCreationService.js"></script>
+        <script src="scripts/services/internal/accountFetchService.js"></script>
+        <script src="scripts/services/internal/selectionCreationService.js"></script>
+        <script src="scripts/services/internal/selectionFetchService.js"></script>
+        <script src="scripts/services/internal/pickingCreationService.js"></script>
+        <script src="scripts/services/internal/pickingFetchService.js"></script>
+        <script src="scripts/services/internal/userFactory.js"></script>
+
+        <script src="scripts/directives/addExternalMovie.js"></script>
+        <script src="scripts/directives/movieWithDetails.js"></script>
+        <script src="scripts/directives/votingAndResultsMenu.js"></script>
+        <script src="scripts/directives/checkUser.js"></script>
+
+    <!-- endbuild -->
+</body>
+</html>

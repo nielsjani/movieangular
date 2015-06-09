@@ -1,0 +1,35 @@
+<div class="alert alert-danger" ng-show="problemsPresent" >
+  <p>Account creation failed:</p>
+  <ul>
+    <div ng-repeat="problem in problems">
+      <li>{{problem}}</li>
+    </div>
+  </ul>
+</div>
+
+<div class="alert alert-success" ng-show="accountCreated">
+  Your account has been created
+</div>
+
+
+<div class="col-md-3">
+  <h2>Create an account</h2>
+  <form id="register-form">
+    <div class="form-group">
+      <input type="text" class="form-control" placeholder="Username" ng-model="username">
+    </div>
+    <div class="form-group">
+      <input type="password" class="form-control" placeholder="Password" ng-model="password">
+    </div>
+    <div class="form-group">
+      <input type="password" class="form-control" placeholder="Confirm Password" ng-model="passwordConfirmed">
+    </div>
+    <div class="form-group">
+      <div class="row">
+        <div class="col-sm-6">
+          <input type="submit"class="btn btn-default" value="Create account" ng-click="tryToCreateAccount()">
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
