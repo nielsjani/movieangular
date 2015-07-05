@@ -1,8 +1,8 @@
 <div ng-controller="SelectionComposerCtrl">
 
-<h2>The Selection</h2>
+  <p>{{hours}}</p>
 
-  <!--<p>{{movieToSave}}</p>-->
+<h2>The Selection</h2>
 
   <p>Looking for a particular movie? Insert (part) of its title in the box below to check whether we have the movie in our database.</p>
   <div class="row">
@@ -39,6 +39,15 @@
         </a>
       </div>
         <h2 class="col-md-1">{{movie.title}}</h2>
+    </div>
+    <div class="row" ng-repeat="hour in hours">
+      <div class="col-md-2  col-md-offset-2" >
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" ng-change="addOrRemoveHour(movie.id, hour.hour)" ng-model="abc"> {{hour.hour}}
+          </label>
+        </div>
+      </div>
     </div>
     <br />
   </div>

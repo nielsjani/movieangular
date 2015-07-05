@@ -1,1 +1,24 @@
 <h2>Naughty things people said about your site</h2>
+
+<table class="table">
+  <thead>
+  <tr>
+    <th>
+      Type
+    </th>
+    <th>
+      Comment
+    </th>
+  </tr>
+  </thead>
+  <tbody ng-repeat="criticism in criticisms">
+    <tr>
+      <td>
+        {{criticism.type}}
+      </td>
+      <td>
+        {{criticism.comment}}
+      </td>
+    </tr>
+  </tbody>
+</table>

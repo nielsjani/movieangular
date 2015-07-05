@@ -20,15 +20,28 @@ function($scope, $location, $routeParams, SelectionFetchService, SelectionCreati
   );};
 
   $scope.postFullSelection = function(){
-    $scope.selection.date = $scope.date;
-    $scope.selection.name = $scope.selectionTitle;
-    $scope.selection.location = $scope.location;
+    var completeSelection = {
+      id : $scope.selection.id,
+      date : $scope.date,
+      name : $scope.selectionTitle,
+      location : $scope.location,
+      movies : turnDTOIntoMovies($scope.selection.movies)
+    };
 
-    SelectionCreationService.completeSelection($scope.selection)
+    SelectionCreationService.completeSelection(completeSelection)
       .success( function(data){
         $location.path('/');
       }
   );};
+
+  var turnDTOIntoMovies = function(movies){
+    var restoredMovies = [];
+    for(var movie in movies){
+      delete movies[movie].showingHours;
+      restoredMovies.push(movies[movie]);
+    }
+    return restoredMovies;
+  };
 
   getSelection();
 

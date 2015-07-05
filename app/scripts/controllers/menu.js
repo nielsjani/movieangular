@@ -23,6 +23,6 @@ movieAngularApp.controller('MenuCtrl', ['$scope', 'UserService', function($scope
 
   $scope.isLoggedIn = function(){
     return UserService.isLogged;
-  }
+  };
 
 }]);

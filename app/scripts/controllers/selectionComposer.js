@@ -12,6 +12,15 @@ movieAngularApp.controller('SelectionComposerCtrl', ['$scope', '$location', 'Mov
         $scope.showOriginalAddImplementation = false;
         $scope.movieToSave = undefined;
         $scope.showAddButton = true;
+        $scope.hours = [
+        {hour:'19h30', pickedBy:[]},
+        {hour:'19h30 (3D)', pickedBy:[]},
+        {hour:'19h45', pickedBy:[]},
+        {hour:'19h45 (3D)', pickedBy:[]},
+        {hour:'22h15', pickedBy:[]},
+        {hour:'22h15 (3D)', pickedBy:[]}
+        ];
+        $scope.hoursForMovie = [];
 
         $scope.getAllMovies = function(updateFilter){
           MovieFetchService.getAllStoredMovies()
@@ -65,6 +74,19 @@ movieAngularApp.controller('SelectionComposerCtrl', ['$scope', '$location', 'Mov
           });
         };
 
+        $scope.addOrRemoveHour = function(movieId, hour){
+          for(var i = 0; i < $scope.hours.length; i++) {
+            if($scope.hours[i].hour === hour){
+              var index = $scope.hours[i].pickedBy.indexOf(movieId);
+              if(index === -1){
+                $scope.hours[i].pickedBy.push(movieId);
+              } else {
+                $scope.hours[i].pickedBy.splice(index,1);
+              }
+            }
+          }
+        };
+
 
         //TODO: directive for selection
         $scope.selection = [];
@@ -72,22 +94,30 @@ movieAngularApp.controller('SelectionComposerCtrl', ['$scope', '$location', 'Mov
 
         $scope.goToConfirmationScreen =function(){
           var movieIds = extractIdsFromSelection();
-          SelectionCreationService.addSelection({movieIds: movieIds})
+          SelectionCreationService.addSelection({movieIdsAndShowingHours: movieIds})
                           .success(function(data) {
                             $scope.selId = data.id;
                             $location.path('/confirmSelection/'+data.id);
                           });
-
-
         };
 
         var extractIdsFromSelection = function(){
           var movieIds = [];
           for(var movie in $scope.selection){
-            movieIds.push($scope.selection[movie].id);
+            var movieId = $scope.selection[movie].id;
+            movieIds.push({movieId:$scope.selection[movie].id, showingHours:createShowingHoursForId(movieId)});
           }
-
           return movieIds;
+        };
+
+        var createShowingHoursForId = function(movieId){
+          var showingHoursString = '';
+          for(var i = 0; i < $scope.hours.length; i++) {
+            if($scope.hours[i].pickedBy.indexOf(movieId) !== -1){
+              showingHoursString += $scope.hours[i].hour + ' / ';
+            }
+          }
+          return showingHoursString === '' ? 'No showing hours known' : showingHoursString;
         };
 
 }]);

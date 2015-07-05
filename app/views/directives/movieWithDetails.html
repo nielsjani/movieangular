@@ -1,7 +1,7 @@
 <h2 class="h2">{{movieInfo.title}} ({{movieInfo.year}}, {{movieInfo.minutes}} mins)</h2>
 <div class="row">
   <div class="col-md-2" ng-hide="!fixthisShit">
-    <a href="{{movieInfo.posterUrl}}" data-lightbox="{{movieInfo.posterUrl}}" data-title="{{movieInfo.title}}">
+    <input href="{{movieInfo.posterUrl}}" data-lightbox="{{movieInfo.posterUrl}}" data-title="{{movieInfo.title}}">
       <img src="{{movieInfo.posterUrl}}" alt="{{movieInfo.title}} poster" style="zoom: 0.5" >
     </a>
   </div>
@@ -10,4 +10,5 @@
   <div class="col-md-1">MetaCritic score:
     <br> {{movieInfo.metascore === 0 ? 'No ratings yet' : movieInfo.metascore}}</div>
 </div>
+<h3>Vertoningen om: {{movieInfo.showingHours.hours}}</h3>
 <br />

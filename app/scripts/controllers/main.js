@@ -7,7 +7,6 @@ movieAngularApp.controller('MainCtrl', ['$scope', '$http', 'MovieInfoService', '
     $scope.loaded = false;
     $scope.testRunSuccess = false;
     $scope.movieTitleInput = '';
-    $scope.showAddButton;
     $scope.movieAdded = false;
     $scope.findMovie = function(){
 

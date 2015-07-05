@@ -75,4 +75,10 @@ $scope.loggedIn = function(){
 
 getActiveSelection();
 
+
+$scope.bla="Calling for ng";
+$scope.changeText =function(){
+$scope.bla = "Angular werkt hier";
+}
+
 }]);

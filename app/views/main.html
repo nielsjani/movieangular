@@ -1,3 +1,40 @@
+<div id="gallery1" class="mfp-hide">
+  <div class="slide">
+    ... some content for slide 1 ...
+    {{bla}}
+    <button class="close-popup" type="submit" ng-click="changeText()" >Hello button</button>
+  </div>
+  <div class="slide">
+    ... some content for slide 2 ...
+  </div>
+</div>
+
+<p>Blah blah <a href="#gallery1" class="open-gallery-link">view gallery one</a> blah blah ...</p>
+
+<script>
+
+  $('.open-gallery-link').click(function() {
+
+  var items = [];
+  $( $(this).attr('href') ).find('.slide').each(function() {
+    items.push( {
+      src: $(this)
+    } );
+  });
+
+  $.magnificPopup.open({
+    items:items,
+    gallery: {
+      enabled: false
+    }
+  });
+});
+
+$('.close-popup').click(function(){
+  $.magnificPopup.close();
+});
+</script>
+
 <voting-and-results-menu></voting-and-results-menu>
 
 <div class="alert alert-success" ng-show="showPickingsSubmitted">
