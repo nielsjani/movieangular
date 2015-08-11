@@ -1,8 +1,8 @@
 'use strict';
 
-var movieAngularApp = angular.module('movieAngularApp');
-
-movieAngularApp.controller('SelectionComposerCtrl', ['$scope', '$location', 'MovieFetchService', 'MovieCreationService', 'SelectionCreationService',
+angular
+.module('movieAngularApp')
+.controller('SelectionComposerCtrl', ['$scope', '$location', 'MovieFetchService', 'MovieCreationService', 'SelectionCreationService',
  function($scope, $location, MovieFetchService, MovieCreationService,SelectionCreationService) {
 
         $scope.movies = [];

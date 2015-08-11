@@ -1,8 +1,8 @@
 'use strict';
 
-var movieAngularApp = angular.module('movieAngularApp');
-
-movieAngularApp.service('MovieCreationService', function($http) {
+angular
+.module('movieAngularApp')
+.service('MovieCreationService', function($http) {
 
     this.addMovie = function(movie){
 

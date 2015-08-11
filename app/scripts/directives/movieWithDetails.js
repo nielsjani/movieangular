@@ -1,8 +1,8 @@
 'use strict';
 
-var movieAngularApp = angular.module('movieAngularApp');
-
-movieAngularApp.directive('movieWithDetails', [function () {
+angular
+.module('movieAngularApp')
+.directive('movieWithDetails', [function () {
   return {
     templateUrl: 'views/directives/movieWithDetails.html',
     restrict: 'AEC',

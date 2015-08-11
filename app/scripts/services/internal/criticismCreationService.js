@@ -1,8 +1,8 @@
 'use strict';
 
-var movieAngularApp = angular.module('movieAngularApp');
-
-movieAngularApp.service('CriticismCreationService', function($http) {
+ angular
+ .module('movieAngularApp')
+ .service('CriticismCreationService', function($http) {
 
     this.addCriticism = function(criticism){
 

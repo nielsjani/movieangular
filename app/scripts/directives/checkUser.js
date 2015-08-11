@@ -1,12 +1,12 @@
 'use strict';
 
-var movieAngularApp = angular.module('movieAngularApp');
-
-movieAngularApp.directive('checkUser', ['$rootScope', '$location', 'UserService',
+angular
+.module('movieAngularApp')
+.directive('checkUser', ['$rootScope', '$location', 'UserService',
                  function ($r, $location, UserService) {
                    return {
-                     link: function (scope, elem, attrs, ctrl) {
-                       $r.$on('$routeChangeStart', function(e, curr, prev){
+                     link: function () {
+                       $r.$on('$routeChangeStart', function(e, curr){
                        var hasCorrectRole = false;
                        if(curr.access!==undefined){
                          for(var role in curr.access.roles){

@@ -1,8 +1,8 @@
 'use strict';
 
-var movieAngularApp = angular.module('movieAngularApp');
-
-movieAngularApp.service('AccountCreationService', function($http) {
+angular
+.module('movieAngularApp')
+.service('AccountCreationService', function($http) {
 
     this.createAccount = function(userdata){
 

@@ -1,8 +1,8 @@
 'use strict';
 
-var movieAngularApp = angular.module('movieAngularApp');
-
-movieAngularApp.controller('ResultsCtrl', ['$scope', 'SelectionFetchService', 'PickingFetchService', function($scope, SelectionFetchService, PickingFetchService) {
+angular
+.module('movieAngularApp')
+.controller('ResultsCtrl', ['$scope', 'SelectionFetchService', 'PickingFetchService', function($scope, SelectionFetchService, PickingFetchService) {
 
 $scope.selection={};
 $scope.moviesAndVotes = {};

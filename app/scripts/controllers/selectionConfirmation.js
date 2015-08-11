@@ -1,8 +1,8 @@
 'use strict';
 
-var movieAngularApp = angular.module('movieAngularApp');
-
-movieAngularApp.controller('SelectionConfirmationCtrl', ['$scope', '$location', '$routeParams', 'SelectionFetchService', 'SelectionCreationService',
+angular
+.module('movieAngularApp')
+.controller('SelectionConfirmationCtrl', ['$scope', '$location', '$routeParams', 'SelectionFetchService', 'SelectionCreationService',
 function($scope, $location, $routeParams, SelectionFetchService, SelectionCreationService) {
 
   $scope.cinemas = ['Kinepolis', 'Utopolis'];
@@ -29,7 +29,7 @@ function($scope, $location, $routeParams, SelectionFetchService, SelectionCreati
     };
 
     SelectionCreationService.completeSelection(completeSelection)
-      .success( function(data){
+      .success( function(){
         $location.path('/');
       }
   );};

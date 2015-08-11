@@ -1,8 +1,8 @@
 'use strict';
 
-var movieAngularApp = angular.module('movieAngularApp');
-
-movieAngularApp.controller('MovieDetailsCtrl', ['$scope', function($scope) {
+angular
+.module('movieAngularApp')
+.controller('MovieDetailsCtrl', ['$scope', function($scope) {
 
     $scope.movieInfo = {};
 

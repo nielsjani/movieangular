@@ -1,8 +1,8 @@
 'use strict';
 
-var movieAngularApp = angular.module('movieAngularApp');
-
-movieAngularApp.controller('MenuCtrl', ['$scope', 'UserService', function($scope, UserService) {
+angular
+.module('movieAngularApp')
+.controller('MenuCtrl', ['$scope', 'UserService', function($scope, UserService) {
   $scope.getLoginTab = function(){
   if(UserService.isLogged){
     return {'url':'#/', 'text':'Hello, '+UserService.username};

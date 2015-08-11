@@ -1,8 +1,8 @@
 'use strict';
 
-var movieAngularApp = angular.module('movieAngularApp');
-
-movieAngularApp.service('AccountFetchService', function($http) {
+angular
+.module('movieAngularApp')
+.service('AccountFetchService', function($http) {
 
     this.login = function(userdata){
 

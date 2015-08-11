@@ -1,8 +1,8 @@
 'use strict';
 
-var movieAngularApp = angular.module('movieAngularApp');
-
-movieAngularApp.controller('MainCtrl', ['$scope', '$http', 'MovieInfoService', 'MovieCreationService', function($scope, $http, MovieInfoService, MovieCreationService) {
+angular
+.module('movieAngularApp')
+.controller('MainCtrl', ['$scope', '$http', 'MovieInfoService', 'MovieCreationService', function($scope, $http, MovieInfoService, MovieCreationService) {
     $scope.movieInfo = {};
     $scope.loaded = false;
     $scope.testRunSuccess = false;

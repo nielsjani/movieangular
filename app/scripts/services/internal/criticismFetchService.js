@@ -1,8 +1,8 @@
 'use strict';
 
-var movieAngularApp = angular.module('movieAngularApp');
-
-movieAngularApp.service('CriticismFetchService', function($http) {
+angular
+.module('movieAngularApp')
+.service('CriticismFetchService', function($http) {
 
 this.getCriticisms = function(){
 

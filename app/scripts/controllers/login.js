@@ -1,8 +1,8 @@
 'use strict';
 
-var movieAngularApp = angular.module('movieAngularApp');
-
-movieAngularApp.controller('LoginCtrl', ['$scope', 'UserService', 'AccountFetchService', function($scope, UserService, AccountFetchService) {
+angular
+.module('movieAngularApp')
+.controller('LoginCtrl', ['$scope', 'UserService', 'AccountFetchService', function($scope, UserService, AccountFetchService) {
 
 $scope.loginFailed = false;
 
@@ -14,7 +14,7 @@ $scope.tryToLogIn = function(){
                               UserService.username = data.username;
                               $scope.loginFailed = false;
                             })
-                            .error(function(data){
+                            .error(function(){
                               $scope.loginFailed = true;
                             });
 };

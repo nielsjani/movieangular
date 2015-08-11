@@ -1,8 +1,8 @@
 'use strict';
 
-var movieAngularApp = angular.module('movieAngularApp');
-
-movieAngularApp.controller('AccountCreationCtrl', ['$scope', 'AccountCreationService', 'UserService', function($scope, AccountCreationService, UserService) {
+angular
+  .module('movieAngularApp')
+  .controller('AccountCreationCtrl', ['$scope', 'AccountCreationService', 'UserService', function($scope, AccountCreationService, UserService) {
 
 $scope.problems = [];
 $scope.problemsPresent = false;
@@ -19,7 +19,7 @@ $scope.tryToCreateAccount = function(){
                                           UserService.roles = data.roles;
                                           UserService.username = data.username;
                                         })
-                                        .error(function(data){
+                                        .error(function(){
                                           $scope.problems.push('Username already taken');
                                           $scope.problemsPresent = true;
                                         });

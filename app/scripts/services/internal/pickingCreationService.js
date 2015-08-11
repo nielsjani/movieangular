@@ -1,8 +1,8 @@
 'use strict';
 
-var movieAngularApp = angular.module('movieAngularApp');
-
-movieAngularApp.service('PickingCreationService', function($http) {
+angular
+.module('movieAngularApp')
+.service('PickingCreationService', function($http) {
 
     this.addPicking = function(pickingsForSelection){
 

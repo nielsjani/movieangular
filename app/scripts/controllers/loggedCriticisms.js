@@ -1,8 +1,8 @@
 'use strict';
 
-var movieAngularApp = angular.module('movieAngularApp');
-
-movieAngularApp.controller('LoggedCriticismsCtrl', ['$scope', 'CriticismFetchService', function($scope, CriticismFetchService) {
+angular
+.module('movieAngularApp')
+.controller('LoggedCriticismsCtrl', ['$scope', 'CriticismFetchService', function($scope, CriticismFetchService) {
 
 $scope.criticisms = [];
 

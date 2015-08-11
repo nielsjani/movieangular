@@ -1,8 +1,9 @@
 'use strict';
 
-var movieAngularApp = angular.module('movieAngularApp');
 
-movieAngularApp.controller('PublicMoviePollCtrl', ['$scope', 'SelectionFetchService', 'PickingCreationService', 'UserService', function($scope, SelectionFetchService, PickingCreationService, UserService) {
+angular
+  .module('movieAngularApp')
+  .controller('PublicMoviePollCtrl', ['$scope', 'SelectionFetchService', 'PickingCreationService', 'UserService', function($scope, SelectionFetchService, PickingCreationService, UserService) {
 
 $scope.username = UserService.username;
 
@@ -60,7 +61,7 @@ $scope.showSubmitButton = function(){
 $scope.submitPicks = function(){
   var pickingForSelection = {'selectionId':$scope.selection.id, 'movieIds': selectedMovies};
   PickingCreationService.addPicking(pickingForSelection)
-    .success(function(data){
+    .success(function(){
       $scope.remainingChoices = 2;
       selectedMovies = [];
       $scope.showPickingsSubmitted = true;
@@ -74,11 +75,5 @@ $scope.loggedIn = function(){
 };
 
 getActiveSelection();
-
-
-$scope.bla="Calling for ng";
-$scope.changeText =function(){
-$scope.bla = "Angular werkt hier";
-}
 
 }]);
